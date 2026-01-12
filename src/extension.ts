@@ -2,9 +2,19 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 import { WhiteboardPanel } from './WhiteboardPanel';
+import { WhiteboardSidebarProvider } from './WhiteboardSidebarProvider';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Whiteboard Canvas extension is now active!');
+
+    // 註冊 Sidebar Webview Provider（左側 Activity Bar 圖示）
+    const sidebarProvider = new WhiteboardSidebarProvider(context.extensionUri);
+    context.subscriptions.push(
+        vscode.window.registerWebviewViewProvider(
+            WhiteboardSidebarProvider.viewType,
+            sidebarProvider
+        )
+    );
 
     // Register the command to open whiteboard - smart open logic
     const openCommand = vscode.commands.registerCommand('whiteboard.open', async () => {

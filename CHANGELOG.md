@@ -2,6 +2,18 @@
 
 所有版本的重要變更都會記錄在此文件中。
 
+## [1.0.1] - 2026-01-12
+
+### Added - Activity Bar 快捷入口
+- **左側圖示**: 新增 Whiteboard 圖示於左側 Activity Bar，一鍵即可開啟白板。
+- **Sidebar 面板**: 點擊圖示顯示快捷面板，包含「開啟白板」與「新增白板」按鈕。
+- **快捷鍵提示**: Sidebar 面板顯示常用快捷鍵提示。
+
+### Changed
+- **專案位置**: 專案移動至 `Raymond-Agent/600_Project/note-whiteboard/`，便於統一管理與同步。
+
+---
+
 ## [1.0.0] - 2024-12-13
 
 ### Added - Milkdown WYSIWYG 編輯器

@@ -2,7 +2,7 @@
     "name": "note-whiteboard",
     "displayName": "Note Whiteboard",
     "description": "A whiteboard canvas for visualizing and managing markdown files",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "panpan",
     "author": {
         "name": "Pan Pan"
@@ -32,6 +32,24 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "whiteboard-explorer",
+                    "title": "Whiteboard",
+                    "icon": "media/icon.png"
+                }
+            ]
+        },
+        "views": {
+            "whiteboard-explorer": [
+                {
+                    "id": "whiteboard-welcome",
+                    "name": "Whiteboard",
+                    "type": "webview"
+                }
+            ]
+        },
         "commands": [
             {
                 "command": "whiteboard.open",
